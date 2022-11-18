@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy your constellation</title>
+  <!--FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/appleTouch.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/img/favicons/512x512.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicons/512x512.png" />
+  <!--PSEUDOELEMENTOS.CSS -->
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/mediaqueries.css" />
+  <link rel="stylesheet" href="./assets/animaciones.css" />
+  <!--FONT-AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <img src="./assets/img/logo.png" alt="Logo" class="logo" />
+    <nav class="navbar">
+      <div class="menu-label">
+        <img src="./assets/img/menu.png" alt="" class="menu-icon" />
+      </div>
+
+      <ul class="navbar-list">
+        <li><a class="navbar-link" href="#hero">Home</a></li>
+        <li><a class="navbar-link" href="#discover">About</a></li>
+        <li><a class="navbar-link" href="#products">Products</a></li>
+      </ul>
+
+      <div class="cart-label">
+        <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      </div>
+
+      <div class="cart">
+        <h2>Tus estrellas</h2>
+
+        <div class="cart-container"></div>
+
+        <span class="divider"></span>
+
+        <div class="cart-total">
+          <p>Total:</p>
+          <span class="total">0.00 USD</span>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <button class="btn-delete">Vaciar carrito</button>
+      </div>
+
+      <div class="overlay"></div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- hero -->
+    <section id="hero">
+      <div class="hero-info">
+        <h1>Tu propia<span>constelación  </span></h1>
+        <p>
+          ¿Prometiste bajarle la luna? Regalarle una constelación solo para esa persona es mil veces mejor, es tu 
+          <span>oportunidad </span> para tenerla, regalarla o re-venderla.
+        </p>
+        <a href="#info">Buy your constellation</a>
+      </div>
+      <div class="hero-card">
+        <img src="./assets/img/hero/img-inicio.png" />
+        <div class="hero-card-info">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- info -->
+    <section id="info">
+      <h2>Compra, regala o vende tus constelaciones</h2>
+      <div class="info-cards-container">
+        <div class="info-card">
+          <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
+          <h3>Compra tus constelaciones</h3>
+          <p>
+            Podés comprarla de forma sencilla, la agregas al carrito y seguís los pasos.
+          </p>
+        </div>
+        <div class="info-card">
+          <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
+          <h3>Regalá constelaciones</h3>
+          <p>
+            Podés regalarlas con dedicación incluida, te enviamos un mail con todos los datos de tu constelación y un certificado físico con su ubicación.
+          </p>
+        </div>
+        <div class="info-card">
+          <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
+          <h3>Vendé tus constelaciones</h3>
+          <p>
+            En caso de que decidas volver a venderlas, podés hacerlo desde nuestra web, ponelas a la venta al precio que desees y nosotros nos encargamos del resto.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- discover -->
+    <section id="discover">
+      <!-- discover info text -->
+      <div class="discover-info">
+        <h2>¡Las constelaciones más hermosas!</h2>
+        <div class="discover-text">
+          <p>
+            Te ofrecemos todas las constelaciones a tus pies, tenés el honor de comprar la correspondiente a tu signo zodiacal y con una hermosa dedicación, las ofertas son limitadas.
+          </p>
+          <a href="#">Comprar ahora</a>
+        </div>
+      </div>
+
+      <!-- discover cards -->
+      <div class="discover-cards">
+        <img src="./assets/img/discover/capri.jpg" alt="capri" />
+        <img src="./assets/img/discover/comabere.jpg" alt="comabere" />
+        <img src="./assets/img/discover/fornax.jpg" alt="fornax" />
+      </div>
+    </section>
+    <!-- products -->
+    <section id="products">
+      <h2>Hot Sale</h2>
+      <!-- categories -->
+      <div class="categories">
+        <button class="category active">Todas</button>
+        <button class="category" data-category="boreales">Boreales</button>
+        <button class="category" data-category="primavera">Primavera</button>
+        <button class="category" data-category="verano">
+          Verano
+        </button>
+        <button class="category" data-category="otoño">Otoño</button>
+        <button class="category" data-category="invierno">
+          Invierno
+        </button>
+      </div>
+
+      <!-- products -->
+      <div class="products-container"></div>
+      <button class="btn-load">Ver Más</button>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <ul class="footer-links">
+        <li><a href="#">Términos de Uso</a></li>
+        <li><a href="#">Trabajá con Nosotros</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+    </div>
+    <p> Todos los derechos reservados / <span>Carixa Desing</span></p>
+  </footer>
+  <div class="add-modal"></div>
+  <script src="./assets/data.js"></script>
+  <script src="./assets/index.js"></script>
+</body>
+
+</html>
