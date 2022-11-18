@@ -1,22 +1,22 @@
-/* font */
+/* fuente */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-  /* bg colors */
+  /* bg colores */
   --background: #0b132e;
-  --primary: #73d7d5;
+  --primary: #258d8b;
   --secondary: #323b49;
   --btn-bg: #050d26;
   --bg-azul-10: #e9eeff;
   --bg-electric: #f0fbff;
   --nav-bg: #0f1525;
 
-  /* Text colors */
+  /* colores del texto */
   --text-gray: #adb9c7;
   --text-white: #f3f4f6;
 
-  /* Decoration */
-  --fire: #f8a05c;
+  /* Decoración */
+  --fire: #deba2b;
   --electric: #a8c7d3;
 }
 
@@ -83,7 +83,6 @@ header {
   cursor: pointer;
 }
 
-/* MENU HAMBURGUESA Desktop */
 
 .menu-label {
   display: none;
@@ -113,7 +112,6 @@ header {
   flex-direction: column;
   gap: 20px;
 }
-/*OCULTAR BARRA DE SCROLL DEL CARRITO*/
 
 .cart::-webkit-scrollbar {
   display: none;
@@ -222,7 +220,6 @@ header {
   font-size: 18px;
 }
 
-/*Toggle del carro*/
 .open-cart {
   transform: translate(0%);
   transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
@@ -233,7 +230,6 @@ header {
   font-size: 14px;
 }
 
-/*main*/
 main {
   background: var(--background);
   display: flex;
@@ -244,7 +240,6 @@ main {
   width: 100%;
 }
 
-/*Hero*/
 #hero {
   margin-top: 65px;
   padding: 70px 0;
@@ -264,7 +259,7 @@ main {
 .hero-info h1 {
   font-size: 48px;
   width: 80%;
-  min-width: 500px; /*Para que nunca ocupe menos que esto en desktop*/
+  min-width: 500px; 
   font-weight: 800;
   background: linear-gradient(104deg, rgba(21,205,185,1) 16%, rgba(205,169,45,1) 61%, rgba(233,232,227,1) 100%);
   background-clip: text;
@@ -295,7 +290,6 @@ main {
 
 .hero-card {
   width: 400px;
-  /* background: var(--secondary); */
   padding: 20px;
   
   display: flex;
@@ -330,8 +324,6 @@ main {
 }
 
 
-
-/* Info Card */
 #info {
   padding: 70px 0;
   max-width: 1200px;
@@ -382,7 +374,6 @@ main {
   color: var(--text-gray);
 }
 
-/* Discover Section */
 #discover {
   padding: 70px 0;
   max-width: 1200px;
@@ -430,7 +421,6 @@ main {
   width: 30%;
 }
 
-/* Products Section */
 #products {
   display: flex;
   flex-direction: column;
@@ -447,7 +437,6 @@ main {
   margin-bottom: 40px;
 }
 
-/* categories */
 .categories {
   display: flex;
   align-items: center;
@@ -468,7 +457,6 @@ main {
   background: var(--primary);
 }
 
-/* products */
 .products-container {
   display: flex;
   flex-wrap: wrap;
@@ -589,7 +577,6 @@ main {
   cursor: pointer;
 }
 
-/* footer */
 footer {
   background: var(--background);
   color: var(--bg-white);

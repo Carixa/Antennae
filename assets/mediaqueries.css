@@ -1,6 +1,6 @@
-/* Tablet */
+
 @media (max-width: 992px) {
-  /*header*/
+
 
   .navbar {
     gap: 10px;
@@ -33,7 +33,6 @@
     font-size: 18px;
   }
 
-  /* Mostramos el icono del menu */
   .menu-label {
     display: flex;
     order: 2;
@@ -49,9 +48,6 @@
     display: flex;
   }
 
-  /*Se van a superponer el cart y el menu si se abren juntos, eso lo solucionaremos en el modulo de js*/
-
-  /*Hero*/
 
   .hero-info {
     width: 100%;
@@ -64,7 +60,7 @@
   .hero-info h1 {
     width: 90%;
     max-width: 500px;
-    min-width: unset; /*Quitamos el min-width dado para desktop*/
+    min-width: unset; 
   }
 
   .hero-info p {
@@ -76,7 +72,6 @@
     display: none;
   }
 
-  /*info*/
   #info h2 {
     text-align: center;
     width: 80%;
@@ -86,7 +81,6 @@
     max-width: 80%;
   }
 
-  /* discover */
   #discover {
     display: flex;
     flex-direction: column;
@@ -118,10 +112,9 @@
     width: 120px;
   }
 }
+/*para celular*/
 
-/* Celu */
 @media (max-width: 576px) {
-  /* Modificar el carrito para celu*/
   .cart {
     left: 0;
     width: 100%;

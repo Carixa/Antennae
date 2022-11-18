@@ -39,7 +39,7 @@ const productsData = [
     id: 5,
     name: 'Leo',
     bid: 414.52,
-    user: 'MaylenD',
+    user: 'ElianaF',
     category: 'primavera',
     userImg: './assets/img/user.png',
     cardImg: './assets/img/products/leo-primavera.jpg',
@@ -48,7 +48,7 @@ const productsData = [
     id: 6,
     name: 'Virgo',
     bid: 721.44,
-    user: 'WalterMa',
+    user: 'WalterMar',
     category: 'primavera',
     userImg: './assets/img/user.png',
     cardImg: './assets/img/products/virgo-primavera.jpg',
@@ -57,7 +57,7 @@ const productsData = [
     id: 7,
     name: 'Draco',
     bid: 468.20,
-    user: 'ElianaF',
+    user: 'ZainMalik',
     category: 'verano',
     userImg: './assets/img/user.png',
     cardImg: './assets/img/products/draco-verano.jpg',
@@ -136,8 +136,6 @@ const productsData = [
   },
 ];
 
-// Para hacer la paginacion de Ver Más
-// Usamos el array de productos y lo dividimos en arrays de size elementos
 const splitProducts = size => {
   let dividedProducts = [];
   for (let i = 0; i < productsData.length; i += size) {
@@ -146,11 +144,9 @@ const splitProducts = size => {
   return dividedProducts;
 };
 
-// Funcion para dividir los productos en arrays de 6 y manejar la paginacion
 const productsController = {
   dividedProducts: splitProducts(2),
   nextProductsIndex: 1,
   productsLimit: splitProducts(15).length,
 };
 
-// console.log(productsController);

@@ -12,20 +12,15 @@ const barsBtn = document.querySelector(".menu-label");
 const cartMenu = document.querySelector(".cart");
 const barsMenu = document.querySelector(".navbar-list");
 const overlay = document.querySelector(".overlay");
-// BOTON DE VACIAR CARRITO
 const deleteBtn = document.querySelector(".btn-delete");
-// SELECTOR DEL MODAL
 const successModal = document.querySelector(".add-modal");
 
-// Setear el array para el carro
+// Setear el array carrito
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Funcion para guardar en el localStorage
 const saveLocalStorage = (cartList) => {
   localStorage.setItem("cart", JSON.stringify(cartList));
 };
-
-// Funcion para retornar el html a renderizar
 const renderProduct = (product) => {
   const { id, name, bid, user, userImg, cardImg } = product;
   return `
@@ -35,7 +30,7 @@ const renderProduct = (product) => {
         <!-- top -->
         <div class="product-top">
             <h3>${name}</h3>
-            <p>Current Bid</p>
+            <p>Oferta actual</p>
         </div>
 
         <!-- mid -->
@@ -65,9 +60,7 @@ const renderProduct = (product) => {
 </div>`;
 };
 
-// Funcion para renderizar los productos divididos.
-// Recibe uin index, si no recibe nada por defecto va a ser 0
-// Si el index es 0  renderiza el primer array del data
+
 const renderDividedProducts = (index = 0) => {
   products.innerHTML += productsController.dividedProducts[index]
     .map(renderProduct)
@@ -82,10 +75,6 @@ const renderFilteredProducts = (category) => {
   products.innerHTML = productList.map(renderProduct).join("");
 };
 
-// Funcion para renderizar los productos
-// Recibe un index, si no le pasamos nada por default va a ser 0 y una categoria, si no le pasamos nada por default va a ser undefined
-// Si no hay categoria renderizame los productos del array dividido.
-// Si hay categoria ejecuta renderFilteredProducts
 const renderProducts = (index = 0, category = undefined) => {
   if (!category) {
     renderDividedProducts(index);
@@ -94,7 +83,6 @@ const renderProducts = (index = 0, category = undefined) => {
   renderFilteredProducts(category);
 };
 
-// Logica de filtros
 const changeShowMoreBtnState = (category) => {
   if (!category) {
     btnLoad.classList.remove("hidden");
@@ -120,7 +108,6 @@ const changeFilterState = (e) => {
   changeShowMoreBtnState(selectedCategory);
 };
 
-// Funcion para aplicar el filtro por categorias
 const applyFilter = (e) => {
   if (!e.target.classList.contains("category")) return;
   changeFilterState(e);
@@ -133,11 +120,9 @@ const applyFilter = (e) => {
   }
 };
 
-// Funcion que checkee si estamos en el ultimo array del array de productos divididos
 const isLastIndexOf = () =>
   productsController.nextProductsIndex === productsController.productsLimit;
 
-// Funcion para cargar mas productos
 const showMoreProducts = () => {
   renderProducts(productsController.nextProductsIndex);
   productsController.nextProductsIndex++;
@@ -146,8 +131,6 @@ const showMoreProducts = () => {
   }
 };
 
-// Menu Interface
-// Logica para abrir y cerrar el carrito/menu y mostrar el overlay
 const toggleMenu = () => {
   barsMenu.classList.toggle("open-menu");
   if (cartMenu.classList.contains("open-cart")) {
@@ -166,7 +149,6 @@ const toggleCart = () => {
   overlay.classList.toggle("show-overlay");
 };
 
-// Funcion para cerrar menu y carrito si scrolleamos
 const closeOnScroll = () => {
   if (
     !barsMenu.classList.contains("open-menu") &&
@@ -191,16 +173,15 @@ const closeOnOverlayClick = () => {
   overlay.classList.remove("show-overlay");
 };
 
-/* ------------Logica del carrito------------- */
 
 const renderCartProduct = (cartProduct) => {
   const { id, name, bid, img, quantity } = cartProduct;
   return `
   <div class="cart-item">
-    <img src=${img} alt="Nft del carrito" />
+    <img src=${img} alt="constelaciones del carrito" />
     <div class="item-info">
       <h3 class="item-title">${name}</h3>
-      <p class="item-bid">Current bid</p>
+      <p class="item-bid">Oferta actual</p>
       <span class="item-price">${bid} USD</span>
     </div>
     <div class="item-handler">
